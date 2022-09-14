@@ -26,7 +26,7 @@ section:not(#three) {
     align-items: center;
   }
   #two div {
-    width: 400px;
+    width: 200px;
   }
   #red {
     background-color: red;
@@ -58,31 +58,109 @@ section:not(#three) {
     color: #00843D;
   }
   
-  /* START BELOW THIS LINE */
+/* START BELOW THIS LINE */
 
-  #one {
-    display:flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
-  }
+#one {
+  display:flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
 
 #two {
     display: flex;
     align-items: center;
+    
     /* had a problem with #7 */
-    /* need help on #8 */
+    /* ! issues with initial coding found in class */
+    justify-content: space-between;
+
+    /* needed help on #8 */
+    flex-wrap: wrap;
 }
 
 #three {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* or, "grid-template-columns: repeat (4, 1fr); */
+    /* tested in class how the rows follow */
     grid-auto-rows: 100px;
+    /* grid-template-rows: 200px; */
 }
 
 /* ! Did Bonuses in Class */
 
+/* 1 */
+#one {
+  flex-direction: column-reverse;
+}
 
+/* 2 */
+#brown {
+  order: 1;
+}
 
+#orange {
+  order: 2;
+}
 
+#purple {
+  order: 3;
+}
 
+/* 3 */
+#brown {
+  align-self: flex-start;
+}
+
+#purple {
+  align-self: flex-end;
+}
+
+/* 4 */
+
+#p-one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+#p-two {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+#p-three {
+  grid-row-start: 2; 
+  grid-row-end: 4;
+}
+
+#p-four {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#p-five {
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+#p-six {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#p-seven {
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#p-eight {
+  grid-row: 5;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
